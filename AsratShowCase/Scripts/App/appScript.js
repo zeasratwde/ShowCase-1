@@ -1,4 +1,8 @@
-
+/*
+* Written by
+* Asrat Zewde
+* 10-15-2014
+*/
 $(document).ready(function () {
     $("#btnHolder").hide();
     $('#tempMessage').delay(3000).fadeOut();
@@ -41,7 +45,7 @@ function loadData() {
 
     // load nytimes
     
-    var nytimesUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=80dce1c8ec293f1a6f3c5926d84d54ff:16:1113477';
+    var nytimesUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=use your own key';
     $.getJSON(nytimesUrl, function(data){
 
         $nytHeaderElem.text('New York Times Articles About ' + cityStr);
@@ -105,7 +109,7 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
     $('#demoScrollspy').on('activate.bs.scrollspy', function () {
-        // do something…
+        // do somethingâ€¦
     })
 
 // for addding ajax capability to the paged list
