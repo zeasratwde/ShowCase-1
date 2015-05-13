@@ -1,0 +1,142 @@
+﻿@{
+    ViewBag.Title = "Front End Samples";
+}
+
+<div class="pullDown"></div>
+
+<div class="row">
+    <div class="col-md-3 shadeDiv">
+        <h5 class="info">Enter a street address, and city to see google photo</h5>
+        <div>
+            <form id="form-container" class="form-horizontal">
+                <div class="control-group">
+                    <label for="street" class="control-label">Street: </label>
+                    <input class="controls" required="" type="text" id="street" value=""><br />
+                </div>
+                <div class="control-group">
+                    <label for="city" control-label">City:&nbsp;&nbsp; </label>
+                    <input class="controls" required="" type="text" id="city" value="">
+                </div>
+                <div class="control-group">
+                    <button id="submit-btn" class=" btn-group btn-group-vertical controls btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="col-md-6 container">
+        <div id="mCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#mCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mCarousel" data-slide-to="1"></li>
+                <li data-target="#mCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="divLog img1 img-responsive">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3>Select sample application from right pane<br /></h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="divLog img2 img-responsive">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3>Select sample application links<br /></h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="divLog img3 img-responsive">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3>Select sample application from left pane<br /></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#mCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#mCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div> <!-- Carousel -->
+        <!-- container for  google img -->
+        <div id="ajaxInner" class="container img-responsive"></div>
+
+        <div id="btnHolder" class="row">
+            <div class="wikipedia-container col-sm-6">
+                @*<h3 id="wikipedia-header">Relevant Wikipedia Links</h3>*@
+                <a href="#wikipediaJOSNP" role="button" class="btn btn-success" data-toggle="modal" data-target="#wikipediaJOSNP">Launch Relevant Wikipedia Articles</a>
+            </div>
+            <div class="nytimes-container col-sm-6">
+                @*<h3 id="nytimes-header">New York Times Articles</h3>
+                    Button to trigger NY TIMES ARTICLES modal*@
+                <a href="#nyTimesJOSN" role="button" class="btn btn-success" data-toggle="modal" data-target="#nyTimesJOSN">Launch New York Times Articles</a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-2 shadeDiv text-left">
+        <h3 class="h2High">List Tech Implementation</h3>
+        <dl class="fontBoost">
+            <dt> Authentication</dt>
+            <dd>
+                @Html.ActionLink("2-factor Authentication", "Register", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+            </dd>
+            <dd>
+                @Html.ActionLink("OAuth2 Sign-on", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+            </dd>
+            <dt> Angular </dt>
+            <dd>
+                @Html.ActionLink(" Web API from New York Times, Wikipedia  and  Google Map service", "Index", "SPA", routeValues: null, htmlAttributes: new { id = "loginLink" })
+            </dd>
+            <dt> Bootstrap, jQuery, and Angularjs</dt>
+            <dd>used to make page more interactive.</dd>
+        </dl>
+    </div>
+</div>
+
+<!--NYTimes Modal -->
+<div class="modal fade" id="nyTimesJOSN" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">NY Times Article</h4>
+            </div>
+            <div class="modal-body ">
+                <h2 id="greeting" class="greeting">Where do you want to live?</h2>
+                <div id="nytimes-articles" class="article-list"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--  Wikipedia Modal -->
+<div class="modal fade" id="wikipediaJOSNP" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content wikipedia-container">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Wikipedia Article</h4>
+            </div>
+            <div class="modal-body" id="wikipedia-links"></div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+

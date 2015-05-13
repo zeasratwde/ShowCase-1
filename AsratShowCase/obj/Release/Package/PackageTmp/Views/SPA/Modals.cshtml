@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Bootstrap -- Modals";
+}
+<link href="~/Content/bootStrapStyle.css" rel="stylesheet" />
+<div id="SPAMain" class="pullDown">
+    <article>
+        <div class="presentation">
+            <p class="lead">Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults</p>
+            <hr />
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                Launch Agile Manifesto modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"> Manifesto for Agile Software Development</h4>
+                        </div>
+                        <div class="modal-body divLog">
+
+                            <p class="lead">
+                                We are uncovering better ways of developing
+                                software by doing it and helping others do it.
+                                Through this work we have come to value:
+                            </p>
+                            <p class="text-center">
+                                Individuals and interactions <span class="text-muted">over processes and tools</span><br />
+                                Working software <span class="text-muted">over comprehensive documentation</span><br />
+                                Customer collaboration <span class="text-muted">over contract negotiation</span><br />
+                                Responding to change <span class="text-muted">over following a plan</span><br />
+                            </p>
+
+                            That is, while there is value in the items on
+                            the right, we value the items on the left more.
+
+
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    Kent Beck
+                                    Mike Beedle
+                                    Arie van Bennekum
+                                    Alistair Cockburn
+                                    Ward Cunningham
+                                    Martin Fowler
+
+                                </div>
+                                <div class="col-xs-4">
+                                    James Grenning
+                                    Jim Highsmith
+                                    Andrew Hunt
+                                    Ron Jeffries
+                                    Jon Kern
+                                    Brian Marick
+                                </div>
+                                <div class="col-xs-4">
+                                    Robert C. Martin
+                                    Steve Mellor
+                                    Ken Schwaber
+                                    Jeff Sutherland
+                                    Dave Thomas
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+        </div>
+    </article>
+
+
+    <nav class="text-center affix-top ">
+
+        <p><a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> </p>
+        @*<p><a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a></p>*@
+        <p> <a href="@Url.Action("Carousel", "SPA")">Carousel</a></p>
+        <p> <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a></p>
+        <p> <a href="@Url.Action("Modals", "SPA")">Modals</a></p>
+    </nav>
+</div>
+<footer>
+    <div class="text-center fontBoost">
+        <br />
+        <a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> |
+        @*<a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a> |*@
+        <a href="@Url.Action("Carousel", "SPA")">Carousel</a> |
+        <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a> |
+        <a href="@Url.Action("Modals", "SPA")">Modals</a>
+        <p>&copy; @DateTime.Now.Year - Asrat Zewde</p>
+    </div>
+</footer>

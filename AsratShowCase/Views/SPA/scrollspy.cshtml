@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Bootstrap -- Scrollspy";
+}
+<link href="~/Content/bootStrapStyle.css" rel="stylesheet" />
+<div id="SPAMain" class="pullDown">
+    <article></article>
+
+
+    <nav class="text-center">
+
+        <p><a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> </p>
+        <p><a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a></p>
+        <p> <a href="@Url.Action("Carousel", "SPA")">Carousel</a></p>
+        <p> <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a></p>
+        <p> <a href="@Url.Action("Modals", "SPA")">Modals</a></p>
+    </nav>
+    <aside></aside>
+</div>
+<footer>
+    <div class="text-center fontBoost">
+        <br />
+        <a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> |
+        <a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a> |
+        <a href="@Url.Action("Carousel", "SPA")">Carousel</a> |
+        <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a> |
+        <a href="@Url.Action("Modals", "SPA")">Modals</a>
+        <p>&copy; @DateTime.Now.Year - Asrat Zewde</p>
+    </div>
+</footer>
+
+

@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = "Bootstrap -- Modals";
+}
+<link href="~/Content/bootStrapStyle.css" rel="stylesheet" />
+<div id="SPAMain" class="pullDown">
+    <article>
+        <div class="presentation">
+            <p>
+                <b>Customizable commonly used components and jQuery plugins</b>
+            </p>
+            <div>
+                <p class="info">Clik the button for popover, and click again to cancel.</p>
+                <button type="button" class="btn btn-danger" data-container="body" data-toggle="popover" data-placement="left" data-content="Add small overlays of content, to any element for housing secondary information.">
+                    Popover on left
+                </button>
+
+                <button type="button" class="btn btn-success" data-container="body" data-toggle="popover" data-placement="top" data-content=" Popovers whose both title and content are zero-length are never displayed.">
+                    Popover on top
+                </button>
+
+                <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content=" Popovers whose both title and content are zero-length are never displayed.">
+                    Popover on bottom
+                </button>
+
+                <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="right" data-content="Add small overlays of content, to any element for housing secondary information.">
+                    Popover on right
+                </button>
+            </div>
+
+        </div>
+    </article>
+
+    <nav class="text-center affix-top ">
+
+        <p><a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> </p>
+        @*<p><a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a></p>*@
+        <p> <a href="@Url.Action("Carousel", "SPA")">Carousel</a></p>
+        <p> <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a></p>
+        <p> <a href="@Url.Action("Modals", "SPA")">Modals</a></p>
+    </nav>
+</div>
+<footer>
+    <div class="text-center fontBoost">
+        <br />
+        <a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> |
+        @*<a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a> |*@
+        <a href="@Url.Action("Carousel", "SPA")">Carousel</a> |
+        <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a> |
+        <a href="@Url.Action("Modals", "SPA")">Modals</a>
+        <p>&copy; @DateTime.Now.Year - Asrat Zewde</p>
+    </div>
+</footer>
+@{
+    ViewBag.Title = "Bootstrap -- Modals";
+}
+<link href="~/Content/bootStrapStyle.css" rel="stylesheet" />
+<div id="SPAMain" class="pullDown">
+    <article>
+        <div class="presentation">
+            <p>
+                <b>Customizable commonly used components and jQuery plugins</b>
+            </p>
+            <div>
+                <p class="info">Clik the button for popover, and click again to cancel.</p>
+                <button type="button" class="btn btn-danger" data-container="body" data-toggle="popover" data-placement="left" data-content="Add small overlays of content, to any element for housing secondary information.">
+                    Popover on left
+                </button>
+
+                <button type="button" class="btn btn-success" data-container="body" data-toggle="popover" data-placement="top" data-content=" Popovers whose both title and content are zero-length are never displayed.">
+                    Popover on top
+                </button>
+
+                <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content=" Popovers whose both title and content are zero-length are never displayed.">
+                    Popover on bottom
+                </button>
+
+                <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="right" data-content="Add small overlays of content, to any element for housing secondary information.">
+                    Popover on right
+                </button>
+            </div>
+
+        </div>
+    </article>
+   
+    <nav class="text-center affix-top ">
+
+        <p><a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> </p>
+        <p><a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a></p>
+        <p> <a href="@Url.Action("Carousel", "SPA")">Carousel</a></p>
+        <p> <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a></p>
+        <p> <a href="@Url.Action("Modals", "SPA")">Modals</a></p>
+    </nav>
+</div>
+<footer>
+    <div class="text-center fontBoost">
+        <br />
+        <a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> |
+        <a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a> |
+        <a href="@Url.Action("Carousel", "SPA")">Carousel</a> |
+        <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a> |
+        <a href="@Url.Action("Modals", "SPA")">Modals</a>
+        <p>&copy; @DateTime.Now.Year - Asrat Zewde</p>
+    </div>
+</footer>

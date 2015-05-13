@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans|Bitter|Lobster|Inconsolata|Poiret+One' rel='stylesheet' type='text/css'>
+    <title>@ViewBag.Title - Show Case -- MVC,WEB-API, and SPA</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">
+                            <span class="glyphicon glyphicon-home glyphIconColor"></span> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "StateInfo")">
+                            <span class="glyphicon glyphicon-barcode glyphIconColor"></span> Data/Entity Framework
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="@Url.Action("Index", "SPA")"> Front End <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="/SPA/"> Samples </a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="~/Angular/Angular.html">AngularJS App</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="@Url.Action("BootStrap", "SPA")">BootStrap Samples</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("jQuery", "SPA")">jQuery App</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("MongoDb", "SPA")">MongoDB App</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="@Url.Action("About", "Home")">
+                            <span class="glyphicon glyphicon-info-sign glyphIconColor"></span> About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Contact", "Home")">
+                            <span class="glyphicon glyphicon-pencil glyphiconcolor"></span> Contact
+                        </a>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/App")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

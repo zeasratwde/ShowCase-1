@@ -1,0 +1,59 @@
+﻿@model AsratShowCase.Models.StateInfo
+
+@{
+    ViewBag.Title = "US Detailed State Data";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <br /><br /><br /><br />
+
+    <div class="stateContainer text-center">
+
+        <div class="stateData text-left">
+            <dl>
+               
+                <dd>@Model.name, @Model.abbreviation</dd>
+                <dt> Capital:</dt>
+                <dd>@Model.capital</dd>
+                <dt>Most Populous City:</dt>
+                <dd>@Model.mostPopulousCity</dd>
+                <dt>Population:</dt>
+                <dd>@Model.population</dd>
+                <dt>Size:</dt>
+                <dd>@Model.squareMiles Sq Miles</dd>
+            </dl>
+        </div>
+        <div class="stateFlag">
+            @{
+                
+            string flagName = Model.abbreviation + "_flag.jpg";
+            string symbolName = Model.abbreviation + ".jpg";
+            
+            }
+            <figure>
+                <img src="~/Content/imgs/imgFlags/@flagName" /><br />
+                <figcaption>@Model.name's Flag</figcaption>
+            </figure>
+        </div>
+        <div class="stateSymbol">
+            <figure>
+                <img src="~/Content/imgs/imgStateSymbol/@symbolName" />
+                <figcaption>@Model.name's State Symbol</figcaption>
+            </figure>
+        </div>
+    </div>
+
+</body>
+</html>

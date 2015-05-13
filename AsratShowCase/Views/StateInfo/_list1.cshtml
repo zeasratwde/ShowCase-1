@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+
+@model PagedList.IPagedList<asratshowcase.models.stateinfo>
+    @using PagedList.Mvc;
+
+    @{
+    ViewBag.Title = "Index";
+    string flagName;
+    string symbolName;
+    }
+    <div id="pagedContent">
+
+        <div class="stateContainer text-center container-fluid">
+
+            @foreach (var item in Model)
+            {
+            <h4>@Html.DisplayFor(modelItem => item.name),  @Html.DisplayFor(modelItem => item.abbreviation) </h4>
+
+
+            <div class="stateData text-left">
+                <dl>
+                    <dt> Capital:</dt>
+                    <dd>@Html.DisplayFor(modelItem => item.capital)</dd>
+                    <dt>Most Populous City:</dt>
+                    <dd>@Html.DisplayFor(modelItem => item.mostPopulousCity)</dd>
+                    <dt>Population:</dt>
+                    <dd>@Html.DisplayFor(modelItem => item.population)</dd>
+                    <dt>Size:</dt>
+                    <dd>@Html.DisplayFor(modelItem => item.squareMiles) Sq Miles</dd>
+                </dl>
+            </div>
+            <div class="stateFlag img-responsive">
+                @{
+
+                flagName = @Html.DisplayFor(modelItem => item.abbreviation) + "_flag.jpg";
+                symbolName = @Html.DisplayFor(modelItem => item.abbreviation) + ".jpg";
+
+                }
+                <figure>
+                    <img src="~/Content/imgs/@flagName" /><br />
+                    <figcaption>State Flag</figcaption>
+                </figure>
+            </div>
+            <div class="stateSymbol">
+                <figure>
+                    <img src="~/Content/imgs/@symbolName" />
+                    <figcaption> State Capital</figcaption>
+                </figure>
+
+            </div>
+
+            }
+
+            <script src="../Scripts/dirPagination.js"></script>
+
+
+
+
+
+            <div id="linkContentPage">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchFilter = ViewBag.searchFilter }))
+                <p>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</p>
+            </div>
+        </div>
+    </div>

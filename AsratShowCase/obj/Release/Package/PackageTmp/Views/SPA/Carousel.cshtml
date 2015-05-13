@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Bootstrap -- Carousel";
+}
+<link href="~/Content/bootStrapStyle.css" rel="stylesheet" />
+<div  id="SPAMain" class="pullDown">
+    <article>
+        <p class="text-center text-success "><b>A slideshow component for cycling through elements, like a carousel.</b></p>
+            <div id="mCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#mCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mCarousel" data-slide-to="1"></li>
+                    <li data-target="#mCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="divLog img1 img-responsive">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>Code for living<br /></h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="divLog img2 img-responsive">
+                         <a href="https://www.topcoder.com/register/?next=/community/getting-started/" title="Get paid" target="_blank">Get Started (it’s free)</a>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>Challenge yourself. Get paid.<br /></h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="divLog img3 img-responsive">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>challenge and find the best of the best.<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#mCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#mCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div> <!-- Carousel -->
+  
+
+       
+
+    </article>
+
+
+    <nav class="text-center">
+
+        <p><a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> </p>
+        @*<p><a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a></p>*@
+        <p> <a href="@Url.Action("Carousel", "SPA")">Carousel</a></p>
+        <p> <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a></p>
+        <p> <a href="@Url.Action("Modals", "SPA")">Modals</a></p>
+    </nav>
+</div>
+<footer>
+    <div class="text-center fontBoost">
+        <br />
+        <a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> |
+        @*<a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a> |*@
+        <a href="@Url.Action("Carousel", "SPA")">Carousel</a> |
+        <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a> |
+        <a href="@Url.Action("Modals", "SPA")">Modals</a>
+        <p>&copy; @DateTime.Now.Year - Asrat Zewde</p>
+    </div>
+</footer>

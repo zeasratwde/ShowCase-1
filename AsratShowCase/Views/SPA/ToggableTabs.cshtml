@@ -1,0 +1,163 @@
+﻿@{
+    ViewBag.Title = "Bootstrap -- Toggable Tabs";
+}
+<link href="~/Content/ToggableTabs.css" rel="stylesheet" />
+.css" rel="stylesheet" />
+
+<div id="SPAMain" class="pullDown">
+    <article>
+        <div class="presentation">
+            <p class="lead">A dynamic tab functionality to transition through panes of local content, even via dropdown menus</p>
+            <ul class="nav nav-tabs" role="tablist" id="myTab">
+                <li role="presentation" class="active"><a href="#Bloomfilter" aria-controls="home" role="tab" data-toggle="tab">Bloom Filter</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">suffix tree</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"> Red–black tree</a></li>
+                <li class="dropdown">
+                    <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Range minimum query(RMQ)<span class="caret"></span></a>
+
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="whiteColor"><a href="#manulSetting" data-toggle="tab"> lowest common ancestor problem(LCM)</a></li>
+                        <li class="whiteColor"><a href="#remoteSetting" data-toggle="tab">longest common prefix problem (LCP)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+
+                <div role="tabpanel" class="tab-pane active presentation" id="Bloomfilter">
+                    <p>
+                        A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970,
+                        that is used to test whether an element is a member of a set. False positive matches are possible,
+                        but false negatives are not, thus a Bloom filter has a 100% recall rate. In other words,
+                        a query returns either "possibly in set" or "definitely not in set".
+                        Elements can be added to the set, but not removed (though this can be addressed with a "counting" filter).
+                        The more elements that are added to the set, the larger the probability of false positives.
+                        Bloom proposed the technique for applications where the amount of source data would require
+                        an impracticably large hash area in memory if "conventional" error-free hashing techniques were applied.
+                        He gave the example of a hyphenation algorithm for a dictionary of 500,000 words, out of which 90% follow simple hyphenation rules,
+                        but the remaining 10% require expensive disk accesses to retrieve specific hyphenation patterns.
+                        With sufficient core memory, an error-free hash could be used to eliminate all unnecessary disk accesses;
+                        on the other hand, with limited core memory, Bloom's technique uses a smaller hash area but still eliminates
+                        most unnecessary accesses. For example, a hash area only 15% of the size needed by an ideal error-free
+                        hash still eliminates 85% of the disk accesses (Bloom (1970)).
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    suffix tree
+                    <p>
+                        In computer science, a suffix tree (also called PAT tree or, in an earlier form, position tree)
+                        is a compressed trie containing all the suffixes of the given text as their keys and positions
+                        in the text as their values. Suffix trees allow particularly fast implementations of many important string operations.
+                        The construction of such a tree for the string S takes time and space linear in the length of S.
+                        Once constructed, several operations can be performed quickly, for instance locating a substring in S,
+                        locating a substring if a certain number of mistakes are allowed, locating matches for a regular expression pattern etc.
+                        Suffix trees also provide one of the first linear-time solutions for the longest common substring problem. These speedups come at a cost:
+                        storing a string's suffix tree typically requires significantly more space than storing the string itself.
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    A red–black tree
+                    <p>
+                        A red–black tree is a binary search tree with an extra bit of data per node, its color,
+                        which can be either red or black.[1] The extra bit of storage ensures an approximately
+                        balanced tree by constraining how nodes are colored from any path from the root to the leaf.
+                        Thus, it is a data structure which is a type of self-balancing binary search tree.
+                        Balance is preserved by painting each node of the tree with one of two colors
+                        (typically called 'red' and 'black') in a way that satisfies certain properties,
+                        which collectively constrain how unbalanced the tree can become in the worst case.
+                        When the tree is modified, the new tree is subsequently rearranged and repainted to restore the coloring properties.
+                        The properties are designed in such a way that this rearranging and recoloring can be performed efficiently.
+                        The balancing of the tree is not perfect but it is good enough to allow it to guarantee searching in O(log n)
+                        time, where n is the total number of elements in the tree. The insertion and deletion operations,
+                        along with the tree rearrangement and recoloring, are also performed in O(log n) time.
+                        Tracking the color of each node requires only 1 bit of information per node because there are only two colors.
+                        The tree does not contain any other data specific to its being a red–black tree so its memory footprint is almost identical
+                        to a classic (uncolored) binary search tree. In many cases the additional bit of information can be stored at no additional memory cost.
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="setting">
+                    <p>
+                        In computer science, a range minimum query (RMQ)
+                        solves the problem of finding the minimal value in a sub-array of an
+                        array of comparable objects. Range minimum queries have several use cases in computer
+                        science such as the lowest common ancestor problem or the longest common prefix problem (LCP).
+                    </p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="manulSetting">
+                    <p>
+                        In graph theory and computer science, the lowest common ancestor (LCA) of two nodes v and w in a tree
+                        or directed acyclic graph (DAG) is the lowest (i.e. deepest) node that has both v and w as descendants,
+                        where we define each node to be a descendant of itself
+                        (so if v has a direct connection from w, w is the lowest common ancestor).
+                    </p>
+                    <p>
+                        The LCA of v and w in T is the shared ancestor of v and w that is located farthest
+                        from the root. Computation of lowest common ancestors may be useful, for instance,
+                        as part of a procedure for determining the distance between pairs of nodes in a tree:
+                        the distance from v to w can be computed as the distance from the root to v,
+                        plus the distance from the root to w, minus twice the distance from the root to their
+                        lowest common ancestor (Djidjev, Pantziou & Zaroliagis 1991). In ontologies,
+                        the lowest common ancestor is also known as the least common subsumer.
+                    </p>
+                    <p>
+                        In a tree data structure where each node points to its parent,
+                        the lowest common ancestor can be easily determined by finding the first
+                        intersection of the paths from v and w to the root. In general,
+                        the computational time required for this algorithm is O(h)
+                        where h is the height of the tree (length of longest path from a leaf to the root).
+                        However, there exist several algorithms for processing trees so that
+                        lowest common ancestors may be found more quickly. Tarjan's
+                        off-line lowest common ancestors algorithm, for example,
+                        preprocesses a tree in linear time to provide constant-time LCA queries.
+                        In general DAGs, similar algorithms exist, but with super-linear complexity.
+
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="remoteSetting">
+                    <p>
+                        In computer science, the longest common prefix array (LCP array) is an auxiliary
+                        data structure to the suffix array. It stores the lengths of the longest common
+                        prefixes between pairs of consecutive suffixes in the sorted suffix array.
+                        In other words, it is the length of prefix that is common between the two
+                        consecutive suffixes in a sorted suffix array.<br />
+                    </p>
+                    <pre>
+                        Example:
+                         LCP of a and aabba is 1.
+                         LCP of abaabba and abba is 2.
+                      </pre>
+                    <p>
+                        Augmenting the suffix array with the LCP array allows to efficiently simulate top-down and bottom-up
+                        traversals of the suffix tree,[1][2] speeds up pattern matching on the suffix array
+                        and is a prerequisite for compressed suffix trees.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </article>
+
+
+    <div class="text-center divTab">
+
+        <p><a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> </p>
+        @*<p><a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a></p>*@
+        <p> <a href="@Url.Action("Carousel", "SPA")">Carousel</a></p>
+        <p> <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a></p>
+        <p> <a href="@Url.Action("Modals", "SPA")">Modals</a></p>
+    </div>
+</div>
+<footer>
+    <div class="text-center fontBoost">
+        <br />
+        <a href="@Url.Action("Collapseable", "SPA")">Collapseable</a> |
+        @*<a href="@Url.Action("scrollSpy", "SPA")">ScrollSpy</a> |*@
+        <a href="@Url.Action("Carousel", "SPA")">Carousel</a> |
+        <a href="@Url.Action("ToggableTabs", "SPA")">Togglable tabs</a> |
+        <a href="@Url.Action("Modals", "SPA")">Modals</a>
+        <p>&copy; @DateTime.Now.Year - Asrat Zewde</p>
+    </div>
+</footer>

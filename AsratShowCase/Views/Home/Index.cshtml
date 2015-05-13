@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Show Case - Home Page";
+}
+
+<div class="row text-center">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <h1 class="h1High text-info">Welcome!</h1><br />
+        <h4>Asrat D. Zewde</h4>
+
+        </>
+        <p class="lead pcusrive">
+            Most of the codes  presented here are samples of widely used API for training purpose
+            and for my own refernce.
+        </p>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-2 shadeDiv">
+    </div>
+
+
+    <div class="col-md-8 container center-block">
+        <div id="googleCalendar">
+            <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=zeasratwde%40gmail.com&amp;color=%232952A3&amp;src=evgohovm2m3tuvqakdf4hfeq84%40group.calendar.google.com&amp;color=%23875509&amp;src=en.et%23holiday%40group.v.calendar.google.com&amp;color=%23B1440E&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23A32929&amp;src=5dso8589486irtj53sdkr4h6ek%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York"
+                    style=" border-width:0 " width="750" height="400" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+    </div>
+    <div class="col-md-2 shadeDiv text-left">
+        <h3 class="h2High">List Tech Implementation</h3>
+        <dl class="fontBoost">
+            <dt> Authentication</dt>
+            <dd>
+                @Html.ActionLink("2-factor Authentication", "Register", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+            </dd>
+            <dd>
+                @Html.ActionLink("OAuth2 Sign-on", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+            </dd>
+            <dt> Angular </dt>
+            <dd>
+                @Html.ActionLink(" Web API from New York Times, Wikipedia  and  Google Map service", "Index", "SPA", routeValues: null, htmlAttributes: new { id = "loginLink" })               
+            </dd>
+            <dt> Bootstrap, jQuery, and Angularjs</dt>
+            <dd>used to make page more interactive.</dd>
+        </dl>
+    </div>
+</div>
+
+<!--NYTimes Modal -->
+<div class="modal fade" id="nyTimesJOSN" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">NY Times Article</h4>
+            </div>
+            <div class="modal-body ">
+                <h2 id="greeting" class="greeting">Where do you want to live?</h2>
+                <div id="nytimes-articles" class="article-list"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--  Wikipedia Modal -->
+<div class="modal fade" id="wikipediaJOSNP" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content wikipedia-container">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Wikipedia Article</h4>
+            </div>
+            <div class="modal-body" id="wikipedia-links"></div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/app")
+
