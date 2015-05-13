@@ -45,22 +45,20 @@ namespace AsratShowCase
             // This is similar to the RememberMe option when you log in.
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "000000004014D41C",
-            //    clientSecret: "pf4zxHz00OHRJ51vQ-UYIHFOIb5OtZA4");
+           
 
             app.UseTwitterAuthentication(
-               consumerKey: "9KxBZuJPbEBPGu1mTHJwD9gBk",
-               consumerSecret: "GpgxN0o98hPrsTzldgRUmTva0rvi8FO5tCGGlGlUWJNPFp1GkO");
+               consumerKey: "XXXXXXXX",
+               consumerSecret: "XXXXXXXX");
 
             app.UseFacebookAuthentication(
-              appId: "457192691106204",
-              appSecret: "e0103052783dba4eca73d837504e7b57");
+              appId: "XXXXXXXXX",
+              appSecret: "XXXXXXXX");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "277253145550-l5j3s6etgn4cch1ejhev926rlidv8076.apps.googleusercontent.com",
-                ClientSecret = "QU_jgzVW_5Y1yTlpyBxHo6PY"
+                ClientId = "XXXXXXXXX",
+                ClientSecret = "XXXXXXXXXXXXX"
             });
         }
     }
